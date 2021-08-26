@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Accela Application</title>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<div>
+    <div th:switch="${persons}">
+        <h2 th:case="null">No persons yet!</h2>
+        <h2 th:case="${persons.empty}">No persons yet!</h2>
+        <div th:case="*">
+            <h2>Persons</h2>
+            <div th:if="${persons.empty}">No Persons yet!!!</div>
+            <div th:if="${!persons.empty}">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Addresses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="person : ${persons}">
+                        <div th:if="${person != null}">
+                            <td th:text="${person.firstName}"></td>
+                            <td th:text="${person.lastName}"></td>
+                            <td th:if="${!person.addressList.empty}">
+                                <div th:switch="${person.addressList}">
+                                    <div th:case="*">
+                                        <div th:each="address : ${person.addressList}">
+                                            <div th:if="${address != null}">
+                                                <div>
+                                                    <div th:text="${address.street}">,</div>
+                                                    <div th:text="${address.city}">,</div>
+                                                    <div th:text="${address.state}">,</div>
+                                                    <div th:text="${address.postalCode}"></div>
+                                                </div>
+                                                <div><a th:href="@{/updateAddress/{addressId}(addressId=${address.addressId})}">Edit Address</a></div>
+                                                <div><a th:href="@{/deleteAddress/{addressId}(addressId=${address.addressId})}">Delete Address</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><a th:href="@{/addAddress/{personId}(personId=${person.personId})}">Add a new address</a></td>
+                            <td><a th:href="@{/updatePerson/{personId}(personId=${person.personId})}">Edit Person</a></td>
+                            <td><a th:href="@{/deletePerson/{personId}(personId=${person.personId})}">Delete Person</a></td>
+                        </div>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p><a href="/addPerson">Add a new person</a></p>
+    </div>
+</div>
+</body>
+</html>
