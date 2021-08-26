@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "31b9f785-2002-4723-8768-7b04532a9ea0",
+		"name": "Accela",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:19000/api/v1/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Prasad",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Pise",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/addPerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"addPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "personId",
+							"value": "53145731-8bcd-4fda-861a-91c4448b4d5f",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Prasad",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Pise",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/updatePerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"updatePerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "personId",
+							"value": "56c85b9a-32fb-4781-a308-f478cad2bf85",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/deletePerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"deletePerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Addresses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:19000/api/v1/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Person By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "personId",
+							"value": "eb05ce32-6fc9-421e-bc6d-f5aa5a95aeb6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "street",
+							"value": "Clearwater Cove",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Dublin",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Leicester",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "A96XH75",
+							"type": "text"
+						},
+						{
+							"key": "personId",
+							"value": "79e4d363-25e2-4b02-854d-638b7cc39002",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/addAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"addAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Address",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "addressId",
+							"value": "a228fa35-3652-4380-bd1f-6a5422e03e10",
+							"type": "text"
+						},
+						{
+							"key": "street",
+							"value": "Sweetman's Avenue",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Dublin",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Dublin",
+							"type": "text"
+						},
+						{
+							"key": "postalCode",
+							"value": "A94RV10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/updateAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"updateAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Address",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "addressId",
+							"value": "a228fa35-3652-4380-bd1f-6a5422e03e10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/deleteAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"deleteAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get address By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "addressId",
+							"value": "519c628e-47da-4d3c-adfd-50e8153f009c",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:19000/api/v1/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "19000",
+					"path": [
+						"api",
+						"v1",
+						"address"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
